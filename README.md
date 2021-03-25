@@ -1,1 +1,1 @@
-# prizegenerator
+# Prize Generator
