@@ -8,7 +8,7 @@ A service-orientated architecture that randomly
 generates a prize depending on your account number that was generated 
 and is composed of at least 4 services that work together.
 
-Service #1
+**Service #1**
 
 
 The core service – this will render the Jinja2 templates 
@@ -17,35 +17,38 @@ The core service – this will render the Jinja2 templates
  for communicating with the other 3 services, 
  and finally for persisting some data in an SQL database.
 
-Service #2 + #3
+**Service #2 + #3**
 
 These both generate a random “Object”, that generates a: 
+
 Random number
+
 Random letter
+
 API call to an external API
 
-Service #4
+**Service #4**
 
 This service creates an “Object” based upon the results of service #2 + #3 using some pre-defined rules.
 
 
 # Architecture 
 
-Service #2
+**Service #2**
 
 A text generator with 2 different implementations available:
 
 One that creates 3 char Strings of lowercase letters
 One that creates 2 char String of uppercase letters
 
-Service #3
+**Service #3**
 
 A number generator with 2 different implementations available:
 
 One that creates a 6-digit number.
 One that creates an 8-digit number.
 
-Service #4
+**Service #4**
 
 A prize generator with 2 different implementations available, 
 in both cases the prize is determined by the char string and number
@@ -54,9 +57,10 @@ in both cases the prize is determined by the char string and number
 One for when the service is feeling generous (bigger rewards)
 One for when the service is not feeling generous (smaller rewards)'
 
-User Journey:
+**User Journey:**
 
-A page is loaded and an Account Number is generated, it is “ABC123456”.
+A page is loaded and an Account Number is generated, for example 
+let's say it generates “ABC123456”.
 
 Because the first letter of the Account Number is “A” the user has a 25% 
 chance to win £100 and a 75% chance to win £50, this is described in
