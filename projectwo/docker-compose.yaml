@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  db:
+    container_name: mysql
+    build: ./db
+    image: mysql:5.7
+    ports:
+    - target: 3306
+      published: 3306
+      protocol: tcp
+    environment:
+      MYSQL_DATABASE: flask_db
+      MYSQL_ROOT_PASSWORD: password
+  flask-app:
+    container_name: flask-app
+    build: ./flask-app
+    image: flask-app:latest
+    ports:
+    - target: 5500
+      published: 5500
+      protocol: tcp
+  nginx:
+    image: nginx:latest
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
