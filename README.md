@@ -38,14 +38,14 @@ This service creates an “Object” based upon the results of service #2 + #3 u
 
 A text generator with 2 different implementations available:
 
-One that creates 3 char Strings of lowercase letters
+One that creates 4 char Strings of lowercase letters
 One that creates 2 char String of uppercase letters
 
 **Service #3**
 
 A number generator with 2 different implementations available:
 
-One that creates a 6-digit number.
+One that creates a 4-digit number.
 One that creates an 8-digit number.
 
 **Service #4**
