@@ -5,6 +5,7 @@ class Users(db.Model):
     first_name = db.Column(db.String(30), nullable=True)
     last_name = db.Column(db.String(30), nullable=True)
     email_address = db.Column(db.String(50),nullable=True)
+    generated_account_number = db.
 
 
 db.drop_all()
@@ -13,3 +14,5 @@ db.create_all()
 testuser = models.Users(first_name= "Ayona", last_name= "Duncan", email_address: "aydunc@yahoo.com")
 db.session.add(testuser)
 db.session.commit()
+
+service query all 

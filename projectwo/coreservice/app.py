@@ -18,10 +18,12 @@ class Users(db.Model):
 
 
 @app.route('/')
-def hello():
-    random = requests.get("http://flask-app-one:5001/random")
-    data1 = Users.query.all()
-    return render_template('home.html', data1=data1)
+def homepage():
+    random = requests.get("http://servicefour:5003/random")
+	servicefour = requests.get('http://localhost:5003')
+    
+	# data1 = Users.query.all()
+    # return render_template('home.html', data1=data1)
 
 if __name__=='__main__':
-  app.run(host='0.0.0.0', port=5500, debug=True)
+  app.run(host='0.0.0.0', port=5000, debug=True)
