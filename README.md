@@ -8,8 +8,8 @@ A service-orientated architecture that randomly
 generates a prize depending on your account number that was generated 
 and is composed of at least 4 services that work together.
 
-**Service #1**
 
+**Service #1**
 
 The core service – this will render the Jinja2 templates 
  that interact with the application, 
@@ -34,6 +34,8 @@ This service creates an “Object” based upon the results of service #2 + #3 u
 
 # Architecture 
 
+Flow Architecture:
+
 **Service #2**
 
 A text generator with 2 different implementations available:
@@ -56,6 +58,7 @@ in both cases the prize is determined by the char string and number
 
 One for when the service is feeling generous (bigger rewards)
 One for when the service is not feeling generous (smaller rewards)'
+
 
 **User Journey:**
 
@@ -86,6 +89,9 @@ The tools and requirements used for this application to run are as follows:
 
 🎁 Reverse Proxy - NGINX 
 
+Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+The goal behind NGINX was to create a fast web server for handling a large amount of concurrent connections.An NGINX reverse proxy server sits in front of web servers and forwards client requests (e.g. web browsers) to those web servers.Reverse proxies are typically implemented to help increase security, performance, and reliability.
+
 🎁 Programming Language - Python (Flask micro-framework)
 
 🎁 CI Server - Jenkins
@@ -94,15 +100,64 @@ The tools and requirements used for this application to run are as follows:
 
 🎁 Webhooks
 
-🎁 Containerisation Tool - Docker
+Webhooks were used so that whenever there is a change it automatically triggers a build automatically from SCM(this Github) Therefore instead of constantly checking for new changes, 
+the job can be triggered by a web hook which is really just a HTTP POST request to the jenkins server.
+
+🎁 Containerisation Tool - Docker/Compose 
+
+Docker compose was used to sreamline the process of having to use several Docker CLI commands to declare what docker resources we want 
+which takes longer and creates room for human error. A Docker Compose file achieved this by allowing you to define and run multiple Docker containers with a single command 
+through a single configuration file that specifies the deployment.
+
+Benefits include:
+
+**.** Build multiple images/containers with one command
+
+**.** Easy to read and edit
+
+**.** Automatically puts your containers into a network
+
+**.** Containers are deployed as services
+
 
 🎁 Orchestration Tool - Docker Swarm
 
+A container orchestration tool which is used to run a network of containers across multiple host machines, also known as nodes.
+Nodes are grouped together in clusters of managers and workers. Manager nodes manage the Swarm while the worker nodes merely host containers. The
+containers in a Swarm are run as services, and are therefore all replicas of each other, which thereby provides redundancy and high availability to the applications. It also allows for the deployment of the
+ containers at scale. 
+
+Benefits include:
+
+**.** Easily scale up/down containers 
+
+**.** Replicate containers for increased redundancy and improved resiliency
+
+**.** Deploy containers across multiple machines (nodes) 
+
+**.** Load balancing between containers 
+
+**.** Dynamically re-allocate containers across nodes 
+
+**.** Rolling updates can be done without stopping or restarting any containers 
+
 🎁 Configuration management - Ansible Playbook
+
+🎁 Open source repository management - Nexus 
+
+Used to proxy, collect, and manage your dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
+
+Benefits include:
+
+**.** A secure, private, and trusted location to host images
+
+**.** Offline access to stored images
+
+**.** Using local copies of commonly used images is more efficient and speeds up deployment.
 
 🎁 VS Code
 
-🎁 Linux
+🎁 Operating System - Linux
 
 See requirements.txt file for a full list of all requirements
 
