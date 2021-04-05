@@ -96,7 +96,7 @@ The tools and requirements used for this application to run are as follows:
 
 🎁 Reverse Proxy - NGINX 
 
-Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+- Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 The goal behind NGINX was to create a fast web server for handling a large amount of concurrent connections.An NGINX reverse proxy server sits in front of web servers and forwards client requests (e.g. web browsers) to those web servers.Reverse proxies are typically implemented to help increase security, performance, and reliability.
 
 🎁 Programming Language - Python (Flask micro-framework)
