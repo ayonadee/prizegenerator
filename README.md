@@ -34,7 +34,9 @@ This service creates an “Object” based upon the results of service #2 + #3 u
 
 # Architecture 
 
-Flow Architecture:
+Architecture - Flow Chart:
+
+![](assets/flowarchitecture.png)
 
 **Service #2**
 
@@ -71,6 +73,11 @@ chance to win £100 and a 75% chance to win £50, this is described in
 
 
 # Work Progress
+
+Trello Board at the start of project:
+
+![](assets/trellobefore.png)
+
 I used a Trello board for project management,
 please find link attached https://trello.com/b/t1bVao8S/prize-account-number-generator
 
