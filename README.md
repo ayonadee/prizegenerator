@@ -107,12 +107,11 @@ The goal behind NGINX was to create a fast web server for handling a large amoun
 
 🎁 Webhooks
 
-Webhooks were used so that whenever there is a change it automatically triggers a build automatically from SCM(this Github) Therefore instead of constantly checking for new changes, 
-the job can be triggered by a web hook which is really just a HTTP POST request to the jenkins server.
+- Webhooks were used so that whenever there is a change it automatically triggers a build automatically from SCM(this Github) a HTTP POST request to the jenkins server.
 
 🎁 Containerisation Tool - Docker/Compose 
 
-Docker compose was used to sreamline the process of having to use several Docker CLI commands to declare what docker resources we want 
+- Docker compose was used to streamline the process of having to use several Docker CLI commands to declare what docker resources we want 
 which takes longer and creates room for human error. A Docker Compose file achieved this by allowing you to define and run multiple Docker containers with a single command 
 through a single configuration file that specifies the deployment.
 
@@ -129,7 +128,7 @@ Benefits include:
 
 🎁 Orchestration Tool - Docker Swarm
 
-A container orchestration tool which is used to run a network of containers across multiple host machines, also known as nodes.
+- A container orchestration tool which is used to run a network of containers across multiple host machines, also known as nodes.
 Nodes are grouped together in clusters of managers and workers. Manager nodes manage the Swarm while the worker nodes merely host containers. The
 containers in a Swarm are run as services, and are therefore all replicas of each other, which thereby provides redundancy and high availability to the applications. It also allows for the deployment of the
  containers at scale. 
@@ -152,7 +151,7 @@ Benefits include:
 
 🎁 Open source repository management - Nexus 
 
-Used to proxy, collect, and manage your dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
+- Used to proxy, collect, and manage your dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
 
 Benefits include:
 
@@ -187,7 +186,11 @@ Test Coverage: 99%
 
 # Risk Assessment 
 
+ Risk assessment at the start of project:
  
+ Risk assessment during the project:
+ 
+ Risk assessment at the end of project:
 
 # Contributors
 
