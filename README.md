@@ -41,15 +41,17 @@ Architecture - Flow Chart:
 
 A text generator with 2 different implementations available:
 
-One that creates 4 char Strings of lowercase letters
-One that creates 2 char String of uppercase letters
+- One that creates 4 char Strings of lowercase letters
+
+- One that creates 2 char String of uppercase letters
 
 **Service #3**
 
 A number generator with 2 different implementations available:
 
-One that creates a 4-digit number.
-One that creates an 8-digit number.
+- One that creates a 4-digit number.
+
+- One that creates an 8-digit number.
 
 **Service #4**
 
@@ -57,8 +59,9 @@ A prize generator with 2 different implementations available,
 in both cases the prize is determined by the char string and number
  generated above.
 
-One for when the service is feeling generous (bigger rewards)
-One for when the service is not feeling generous (smaller rewards)'
+- One for when the service is feeling generous (bigger rewards)
+
+- One for when the service is not feeling generous (smaller rewards)'
 
 
 **User Journey:**
