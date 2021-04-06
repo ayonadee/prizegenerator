@@ -21,11 +21,10 @@ The core service – this will render the Jinja2 templates
 
 These both generate a random “Object”, that generates a: 
 
-Random number
+- Random number
 
-Random letter
+- Random letter
 
-API call to an external API
 
 **Service #4**
 
@@ -65,10 +64,11 @@ One for when the service is not feeling generous (smaller rewards)'
 **User Journey:**
 
 A page is loaded and an Account Number is generated, for example 
-let's say it generates “ABC123456”.
+let's say it generates “ABCD1234”.
 
-Because the first letter of the Account Number is “A” the user has a 25% 
-chance to win £100 and a 75% chance to win £50, this is described in
+Because the first letter of the Account Number is “a” and there is a "4" in the account number the user has a chance to win 50% of the £10,000 cash prize, because we are feeling generous. 
+There is also a chance to win 25% of the £10,000 cash prize if the first letter of the account number starts with an "A", for when
+we are feeling less generous and this is described in
  the logic of service 4.
 
 
@@ -83,10 +83,10 @@ please find link attached https://trello.com/b/t1bVao8S/prize-account-number-gen
 
 # Build 
 
-Setting the jenkins job to download this github repo where my code is:
+Web Hooks were used to trigger a jenkins job build automatically from this SCM whenever changes were pushed.
 
+Setting the jenkins pipeline:
 
-The build script in the CI Server Jenkins using Flask Gunicorn:
 
 
 # Tech Stack
