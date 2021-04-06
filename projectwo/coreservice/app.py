@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 import requests
+import random as rand
+import string
+
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -19,9 +22,26 @@ class Users(db.Model):
 
 @app.route('/')
 def homepage():
-    random = requests.get("http://servicefour:5003/random")
-	servicefour = requests.get('http://localhost:5003')
+		return render_template('home.html')
     
+	
+@app.route('/home', methods=['POST','GET'])
+def home():
+	home = requests.get("http://servicefour:5003/prizegenerator")
+    
+
+@app.route('/')
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+# @app.route('/test', methods=['POST', 'GET'])
+# def test():
+#     test = requests.get('http://logic_s4:5004/logic')
+#     print("hello")
+#     print(test.text)
+#     test = test.text
+#     return render_template('test.html', test = test)
 	# data1 = Users.query.all()
     # return render_template('home.html', data1=data1)
 

@@ -19,17 +19,17 @@ The core service – this will render the Jinja2 templates
 
 **Service #2 + #3**
 
-These both generate a random “Object”, that generates a: 
+These both generate a random “Object”, that respectively generates a: 
 
-Random number
+range of random number
 
-Random letter
+a range of random letters
 
-API call to an external API
 
 **Service #4**
 
-This service creates an “Object” based upon the results of service #2 + #3 using some pre-defined rules.
+This service creates an “Object” based upon the results of service #2 + #3 that allocates 50% of the cash prize if there is a 4 in your account number
+and it starts with an A and 25% of the cash prize if you only have a 4 in your account number. 
 
 
 # Architecture 
@@ -72,6 +72,13 @@ chance to win £100 and a 75% chance to win £50, this is described in
 
 # Work Progress
 I used a Trello board for project management,
+
+Trello board at the start of project:
+
+![](Test/testcov.jpg)
+
+Trello board now:
+
 please find link attached https://trello.com/b/t1bVao8S/prize-account-number-generator
 
 # Build 
@@ -155,6 +162,8 @@ Benefits include:
 
 **.** Using local copies of commonly used images is more efficient and speeds up deployment.
 
+🎁 Docker Stack 
+
 🎁 VS Code
 
 🎁 Operating System - Linux
@@ -180,7 +189,7 @@ Test Coverage: 99%
 
 # Risk Assessment 
 
- 
+ See agile fundamentals risk assessment 
 
 # Contributors
 

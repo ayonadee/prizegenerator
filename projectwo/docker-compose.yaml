@@ -1,23 +1,45 @@
 version: "3.8"
 services:
-  db:
-    container_name: mysql
-    build: ./db
-    image: mysql:5.7
+  # db:
+  #   container_name: mysql
+  #   build: ./db
+  #   image: mysql:5.7
+  #   ports:
+  #   - target: 3306
+  #     published: 3306
+  #     protocol: tcp
+  #   environment:
+  #     MYSQL_DATABASE: flask_db
+  #     MYSQL_ROOT_PASSWORD: password
+
+  coreservice:
+    container_name: coreservice
+    image: coreservice:latest
+    build: ./projectwo
     ports:
-    - target: 3306
-      published: 3306
+    - target: 5000
+      published: 5000
       protocol: tcp
-    environment:
-      MYSQL_DATABASE: flask_db
-      MYSQL_ROOT_PASSWORD: password
-  flask-app:
-    container_name: flask-app
-    build: ./flask-app
-    image: flask-app:latest
+  servicetwo:
+    container_name: servicetwo
+    image: servicetwo:latest
+    build: ./projectwo
     ports:
-    - target: 5500
-      published: 5500
+    - target: 5001
+      protocol: tcp
+  servicethree:
+    container_name: servicethree
+    image: servicethree:latest
+    build: ./projectwo
+    ports:
+    - target: 5002
+      protocol: tcp
+  servicefour:
+    container_name: servicefour
+    image: servicefour:latest
+    build: ./projectwo
+    ports:
+    - target: 5003
       protocol: tcp
   nginx:
     image: nginx:latest
