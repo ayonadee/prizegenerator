@@ -86,7 +86,6 @@ I used a Trello board for project management,
 
 Trello board at the start of project:
 
-![](Test/testcov.jpg)
 
 Trello board now:
 
