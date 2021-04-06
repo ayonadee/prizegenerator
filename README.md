@@ -103,6 +103,20 @@ The goal behind NGINX was to create a fast web server for handling a large amoun
 
 🎁 CI Server - Jenkins
 
+- Jenkins Pipeline is a user-defined model of a CD pipeline. My Pipeline was achieved using a Jenkinsfile which includes stages for building an application, testing it and then delivering it. This was subsequently commited to this SCR which means that 
+the configuration is portable accross different machines.
+
+Benefits Include:
+
+**.** Configure the build configuration to evolve as your code evolves by managing this with your SCM
+
+**.** Do not have to create several shell scripts. Automatically creates a pipeline build process for all branches and pull requests
+
+**.** There is a trail of commits so you can track where things went wrong
+
+**.** If there are multiple people working on a project, they do not need access to your VM, they automatically
+have access to your Jenkinsfile and can view and edit it accordingly.
+
 🎁 Markup Languages for Front-end -  Flask(HTML)
 
 🎁 Webhooks
@@ -112,7 +126,7 @@ The goal behind NGINX was to create a fast web server for handling a large amoun
 🎁 Containerisation Tool - Docker/Compose 
 
 - Docker compose was used to streamline the process of having to use several Docker CLI commands to declare what docker resources we want 
-which takes longer and creates room for human error. A Docker Compose file achieved this by allowing you to define and run multiple Docker containers with a single command 
+which takes longer and creates room for human error. A Docker Compose file achieved this by allowing me to define and run multiple Docker containers with a single command 
 through a single configuration file that specifies the deployment.
 
 Benefits include:
@@ -151,7 +165,7 @@ Benefits include:
 
 🎁 Open source repository management - Nexus 
 
-- Used to proxy, collect, and manage your dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
+- Used to proxy, collect, and manage dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
 
 Benefits include:
 
