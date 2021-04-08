@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>list of users</title>
+  <style> 
+  table, th, td{
+    border: 1px solid green
+  } 
+  body{ 
+  background-image: url('money.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  li h2{
+    color: white;
+  }
+
+  caption{
+        color:Green;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+  </style>
+		<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/normalize.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styleu.css')}}">
+		<link rel="icon" href="data:;base64,="> -->
+	</head>
+	<body>
+		<header>
+			<ul style="list-style: none;">
+				<li style= "float:right"> <h2> Prize Generator </li> </h2>
+			</ul>
+		</header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+   
+      <h2> Rules to win a prize </h2>
+      <br>
+      <p> An account number will automatically be generated for you once you submit your first name and last name. If 
+        the account number has a '4' or the letter in the account number starts with an 'a', you win a prize! Why? because that's my favourite number and I am feeling generous. Good luck!
+      </p>
+        <section> 
+            <div class="container">
+                <form method='POST'action="">
+    
+                <div class="row">
+                  <div class="col-25">
+                    <label for="fname">First Name</label>
+                  </div>
+                  <div class="col-75">
+                    {{form.first_name}}
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="lname">Last Name</label>
+                  </div>
+                  <div class="col-75">
+                    {{form.last_name}} 
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                {{form.submit}} 
+                </div>
+                </form>
+              </div>
+        </section>
+			<br>
+		<div>
+			<table style="width:100%">
+        <br>
+        <br>
+				<caption> Users </caption>
+        <br>
+        <br>
+        <br>
+					<thead>
+						<tr>
+							<th>First name</th>
+							<th>Last name</th>
+              <th>Account Number</th>
+              <th>Message</th>
+              <th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for u in users %}
+						<tr style="text-align:right">
+							<td>{{u.first_name}}</td>
+							<td>{{u.last_name}}</td>
+              <td>{{u.account_number}}</td>
+              <td>{{u.message}}</td>
+              <td><a href='/home/{{u.id}}' type="button">Delete</a></td>	
+						</tr> {% endfor %}
+					</tbody>
+			</table>
+      <br>
+      <br>
+		</div>
+    </body>
+</html>

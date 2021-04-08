@@ -1,8 +1,8 @@
 #Use Python 3.6 as a base image
 FROM python:3.7
-WORKDIR /coreservice
+# WORKDIR /coreservice
 # Copy contents into image
-COPY requirements.txt .
+COPY requirements.txt . 
 # install pip dependencies from requirements file
 RUN pip3 install -r requirements.txt
 # Expose correct port
