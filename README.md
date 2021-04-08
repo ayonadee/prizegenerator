@@ -86,7 +86,6 @@ I used a Trello board for project management,
 
 Trello board at the start of project:
 
-![](Test/testcov.jpg)
 
 Trello board now:
 
@@ -97,6 +96,14 @@ please find link attached https://trello.com/b/t1bVao8S/prize-account-number-gen
 Web Hooks were used to trigger a jenkins job build automatically from this SCM whenever changes were pushed.
 
 Setting the jenkins pipeline:
+
+In the Jenkins file:
+ - The build stage builds all the containers and images
+ - The test stage tests the application is working properly using pytest
+ - The push stage tags and pushes images to Dockerhub
+ - Configuration management stage checks the swarm is working as it should
+ - Deploy stage deploys the containers as a stack 
+ 
 
 
 
@@ -174,7 +181,24 @@ Benefits include:
 
 🎁 Configuration management - Ansible Playbook
 
-🎁 Open source repository management - Nexus 
+- A configuration management tool that is declarative in that
+I declare the end-state/desired state (in this case Docker, Docker Swarm
+and Nginx)
+
+Ansible connects to other machines via ssh in the configuration 
+management stage in Jenkins.
+
+The playbook allows us to join worker nodes and initialises the
+manager node to ensure that the swarm is configured correctly.
+
+Benefits include:
+
+**.** Gets rid of environment drift(example an update) by making
+desired/end state idempotent(stops them drifting) by using playbooks.
+
+
+
+🎁 Open source repository management - Dockerhub
 
 - Used to proxy, collect, and manage dependencies, so that you are not constantly juggling a collection of Docker images. Cached artefacts, so that, after the first build, the project will consult the cache before downloading anything. Installed Nexus on a local server, so that the builds have access to any artefacts that have previously been downloaded, even if the servers go offline.
 
