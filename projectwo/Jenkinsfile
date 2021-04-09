@@ -18,29 +18,38 @@ pipeline {
 
         stage('Stage 1: Test'){
             steps{
+                dir('projectwo') {
                 sh "bash pytest.sh"
                 
+            }
             }
         }
 
         stage('Stage 2: Tag & Push Image'){
                 steps{
-                        sh 'docker-compose push'
+                    dir('projectwo') {
+                    sh 'docker-compose push'
                         
-                    }
+                        
                 }
+                }
+        }
 
         stage('Stage 3: configuration management'){
                 steps{
+                       dir('projectwo') {
                        sh 'cd playbook && ansible-playbook -i inventory.yaml playbook.yaml' 
                         }
                     }
+        }
 
         stage('Stage 4: Deploy'){
             steps{
+                dir('projectwo') {
                 sh " docker stack deploy --compose-file docker-compose.yaml projectwo"
             }
         }
     }
 }
+
 
