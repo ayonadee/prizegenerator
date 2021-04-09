@@ -5,7 +5,7 @@ source venv/bin/activate
 pip3 install -r coreservice/requirements.txt
 
 
-python3 -m pytest coreservice --cov-coreservice --cov-report-term-missing
-python3 -m pytest servicetwo --cov-servicetwo --cov-report-term-missing
-python3 -m pytest servicethree --cov-servicethree --cov-report-term-missing
-python3 -m pytest servicefour --cov-servicefour --cov-report-term-missing
+python3 -m pytest coreservice --cov=coreservice --cov-report=term-missing
+python3 -m pytest servicetwo --cov=servicetwo --cov-report=term-missing
+python3 -m pytest servicethree --cov=servicethree --cov-report=term-missing
+python3 -m pytest servicefour --cov=servicefour --cov-report=term-missing
