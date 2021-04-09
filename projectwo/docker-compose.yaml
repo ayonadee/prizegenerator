@@ -2,7 +2,7 @@ version: "3.8"
 services:
   coreservice:
     container_name: coreservice
-    image: coreservice:latest
+    image: ayonadee/coreservice:latest
     build: ./coreservice
     ports:
     - target: 5000
@@ -20,14 +20,14 @@ services:
       protocol: tcp
   servicethree:
     container_name: servicethree
-    image: servicethree:latest
+    image: ayonadee/servicethree:latest
     build: ./servicethree
     ports:
     - target: 5002
       protocol: tcp
   servicefour:
     container_name: servicefour
-    image: servicefour:latest
+    image: ayonadee/servicefour:latest
     build: ./servicefour
     ports:
     - target: 5003
