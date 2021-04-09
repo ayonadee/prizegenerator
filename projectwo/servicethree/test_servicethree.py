@@ -17,11 +17,11 @@ class TestViews(TestBase):
 class TestLetter(TestBase):
     def test_len(self):
         response = self.client.get(url_for('randomletter'))
-        self.assertEqual(len(response.data), 4)
+        self.assertEqual(len(response.data), 2)
     
 
     def test_letter(self):
         with patch('random.choice') as r:
             r.return_value = 'a'
             response = self.client.get(url_for('randomletter'))
-            self.assertIn(b'aaaa',response.data)
+            self.assertIn(b'aa',response.data)

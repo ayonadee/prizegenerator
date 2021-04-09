@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/randomnum")
 def randomnum():
     account_number = ""
-    for number in range(4):
+    for number in range(8):
         random_number = str(rand.randint(0,9))
         account_number += random_number
     return f'{account_number}'

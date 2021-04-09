@@ -15,7 +15,7 @@ class TestViews(TestBase):
 
     def test_prizegen(self):
         with patch('requests.get') as i:
-            i.return_value.text = "abcd1234"
+            i.return_value.text = "abcdef12"
             response = self.client.get(url_for('prizegenerator'))
             self.assertEqual(response.status_code, 200)
             self.assertIsNotNone(response.data)
