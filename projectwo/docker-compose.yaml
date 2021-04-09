@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  coreservice:
+    container_name: coreservice
+    image: ayonadee/coreservice:latest
+    build: ./coreservice
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: ${SECRET_KEY}
+  servicetwo:
+    container_name: servicetwo
+    image: ayonadee/servicetwo:latest
+    build: ./servicetwo
+    ports:
+    - target: 5001
+      protocol: tcp
+  servicethree:
+    container_name: servicethree
+    image: ayonadee/servicethree:latest
+    build: ./servicethree
+    ports:
+    - target: 5002
+      protocol: tcp
+  servicefour:
+    container_name: servicefour
+    image: ayonadee/servicefour:latest
+    build: ./servicefour
+    ports:
+    - target: 5003
+      protocol: tcp
+ 

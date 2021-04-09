@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+    environment{
+        DATABASE_URI = credentials('DATABASE_URI')
+        app_version = 'version1'
+    }
+    stages{
+
+        stage('Stage 0: Build'){
+            steps{
+                dir('projectwo') {
+                sh "docker-compose build"
+  
+            }
+
+            }
+        }
+
+        stage('Stage 1: Test'){
+            steps{
+                dir('projectwo') {
+                sh "bash pytest.sh"
+                
+            }
+            }
+        }
+
+        stage('Stage 2: Tag & Push Image'){
+                steps{
+                    dir('projectwo') {
+                    sh 'docker-compose push'
+                        
+                        
+                }
+                }
+        }
+
+        stage('Stage 3: configuration management'){
+                steps{
+                       dir('projectwo') {
+                       sh 'cd playbook && /home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml' 
+                        }
+                    }
+        }
+
+        stage('Stage 4: Deploy'){
+            steps{
+                dir('projectwo') {
+                    sh "bash deploy_stack.sh"
+                    
+                }
+            }
+        }
+    }
+}
+
