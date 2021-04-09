@@ -8,8 +8,11 @@ pipeline {
 
         stage('Stage 0: Build'){
             steps{
-
+                dir('projectwo') {
                 sh "docker-compose build"
+  
+            }
+
             }
         }
 
