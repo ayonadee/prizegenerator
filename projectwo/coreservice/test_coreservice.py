@@ -3,14 +3,14 @@ from flask import url_for
 from flask_testing import TestCase
 from application import db, app, models
 from app import app
-import requests
+import requests_mock
 
 class TestBase(TestCase):
     def create_app(self):
         app.config.update(SQLALCHEMY_DATABASE_URI='sqlite:///',
             SECRET_KEY='TEST_SECRET_KEY',
             DEBUG=True,
-            WTF_CSRF_ENABLED=False
+            # WTF_CSRF_ENABLED=False
             )
         return app
 
@@ -34,21 +34,17 @@ class TestBase(TestCase):
         db.session.remove()
         db.drop_all()
 
-class TestBase(TestCase):
-    def create_app(self):
-        return app
        
 class TestViews(TestBase):
     def test_home(self):
-        response = self.client.get(url_for('home'))
-        self.assertEqual(response.status_code, 500)
+        with requests_mock.mock() as m:
+            m.get("http://servicefour:5003/prizegenerator", json='package')
+            response = self.client.get(url_for('home'))
 
-# class TestResponse(TestBase):
-
-#     def test_home_get(self):
-#         response = self.client.get(url_for('home'))
-#         with patch('requests.get') as g:
-#                 g.return_value.text = "1234abcd"
-#                 response = self.client.get(url_for('home'))
-#                 self.assertEqual(response.status_code, 200)
-#                 self.assertIsNotNone(response.data)
+    # def test_home_get(self):
+    #     response = self.client.get(url_for('home'))
+    #     with patch('requests.get') as g:
+    #             g.return_value.text = ""
+    #             response = self.client.get(url_for('home'))
+    #             self.assertEqual(response.status_code, 200)
+    #             self.assertIsNotNone(response.data)

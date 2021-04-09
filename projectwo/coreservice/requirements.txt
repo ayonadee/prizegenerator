@@ -10,3 +10,4 @@ pytest-cov
 flask-testing
 requests==2.23.0
 requests-unixsocket==0.2.0
+requests-mock
