@@ -22,9 +22,8 @@ pipeline {
 
         stage('Stage 2: Tag & Push Image'){
                 steps{
-                        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
-                                image.push("${env.app_version}")
-                        }
+                        sh 'docker-compose push'
+                        
                     }
                 }
 
