@@ -10,12 +10,11 @@ all:
         dockerone:
         dockertwo:
   vars:
-    ansible_user: ayona
-    ansible_ssh_private_key_file: "/home/ayona/.ssh/ansible_id_rsa"
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: "~/.ssh/ansible_id_rsa"
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     docker_users:
       - username: jenkins
       - username: ayona
-    ansible_ssh_private_key_file: "/home/jenkins/.ssh/ansible_id_rsa"
-    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  
         

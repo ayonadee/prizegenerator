@@ -38,7 +38,7 @@ pipeline {
         stage('Stage 3: configuration management'){
                 steps{
                        dir('projectwo') {
-                       sh 'cd playbook && ansible-playbook -i inventory.yaml playbook.yaml' 
+                       sh 'cd playbook && /home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml' 
                         }
                     }
         }
@@ -46,7 +46,8 @@ pipeline {
         stage('Stage 4: Deploy'){
             steps{
                 dir('projectwo') {
-                sh " docker stack deploy --compose-file docker-compose.yaml projectwo"
+                    // export DATABASE_URI
+                    sh " docker stack deploy --compose-file docker-compose.yaml projectwo"
                 }
             }
         }
