@@ -46,8 +46,8 @@ pipeline {
         stage('Stage 4: Deploy'){
             steps{
                 dir('projectwo') {
-                    // export DATABASE_URI
-                    sh " docker stack deploy --compose-file docker-compose.yaml projectwo"
+                    sh "bash deploy_stack.sh"
+                    
                 }
             }
         }
