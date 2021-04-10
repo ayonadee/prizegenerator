@@ -22,6 +22,6 @@ class TestLetter(TestBase):
 
     def test_letter(self):
         with patch('random.choice') as r:
-            r.return_value = 'a'
+            r.return_value = 'A'
             response = self.client.get(url_for('randomletter'))
-            self.assertIn(b'aa',response.data)
+            self.assertIn(b'AA',response.data)
