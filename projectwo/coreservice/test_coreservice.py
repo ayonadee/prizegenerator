@@ -40,11 +40,3 @@ class TestViews(TestBase):
         with requests_mock.mock() as m:
             m.get("http://servicefour:5003/prizegenerator", json='package')
             response = self.client.get(url_for('home'))
-
-    # def test_home_get(self):
-    #     response = self.client.get(url_for('home'))
-    #     with patch('requests.get') as g:
-    #             g.return_value.text = ""
-    #             response = self.client.get(url_for('home'))
-    #             self.assertEqual(response.status_code, 200)
-    #             self.assertIsNotNone(response.data)

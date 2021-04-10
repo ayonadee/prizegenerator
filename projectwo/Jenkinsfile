@@ -2,7 +2,8 @@ pipeline {
     agent any
     environment{
         DATABASE_URI = credentials('DATABASE_URI')
-        app_version = 'version1'
+        SECRET_KEY = credentials('SECRET_KEY')
+        app_version = 'version2'
     }
     stages{
 
