@@ -1,49 +1,37 @@
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
-import requests
+from flask import Flask, render_template,request, url_for, jsonify, Response
+from application import app, models, db
 import random as rand
 import string
+import requests
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, IntegerField
+from os import getenv
+
+# app = Flask(__name__)
 
 
-app = Flask(__name__)
-db = SQLAlchemy(app)
 
-# Replace [PASSWORD] with the root password for your mysql container'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@mysql:3306/flask-db'
-
-class Users(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	first_name = db.Column(db.String(30), nullable=False)
-	last_name = db.Column(db.String(30), nullable=False)
-	email = db.Column(db.String(150), nullable=False, unique=True)
-	def __repr__(self):
-		return ''.join(['User ID: ', str(self.id), '\r\n', 'Email: ', self.email, ' Name: ', self.first_name, ' ', self.last_name, '\n'])
-
-
-@app.route('/')
-def homepage():
-		return render_template('home.html')
-    
-	
-@app.route('/home', methods=['POST','GET'])
-def home():
-	home = requests.get("http://servicefour:5003/prizegenerator")
+class UserForm(FlaskForm):
+    first_name = StringField('First Name')
+    last_name = StringField('Last Name')
+    submit = SubmitField('Submit New User')
     
 
-@app.route('/')
-@app.route('/home')
+@app.route('/home', methods = ['GET', 'POST'])
+@app.route('/',methods = ['GET', 'POST'])
 def home():
-    return render_template('home.html')
-
-# @app.route('/test', methods=['POST', 'GET'])
-# def test():
-#     test = requests.get('http://logic_s4:5004/logic')
-#     print("hello")
-#     print(test.text)
-#     test = test.text
-#     return render_template('test.html', test = test)
-	# data1 = Users.query.all()
-    # return render_template('home.html', data1=data1)
+    form = UserForm()
+    acc_num = requests.get("http://servicefour:5003/prizegenerator").json()
+    if(request.method=='POST'):
+        first_name = form.first_name.data
+        last_name = form.last_name.data
+        new_user = models.Users(first_name = form.first_name.data, last_name =form.last_name.data, account_number = acc_num['Account_Number'] , message = acc_num['Message'] )
+        db.session.add(new_user)
+        db.session.commit()
+    users = models.Users.query.all()
+    return render_template('home.html',form = form, users=users)
+    
+   
 
 if __name__=='__main__':
   app.run(host='0.0.0.0', port=5000, debug=True)
