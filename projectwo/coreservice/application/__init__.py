@@ -1,11 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import getenv
-import secrets
 
-secret = secrets.token_urlsafe(32)
-
-app.secret_key = secret
 
 app = Flask(__name__)
 
