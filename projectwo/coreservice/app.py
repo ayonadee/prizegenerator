@@ -30,7 +30,7 @@ def home():
     users = models.Users.query.all()
     return render_template('home.html',form = form, users=users)
     
-    # hello
+    
    
 
 if __name__=='__main__':
