@@ -10,8 +10,6 @@ from os import getenv
 # app = Flask(__name__)
 
 
-
-
 class UserForm(FlaskForm):
     first_name = StringField('First Name')
     last_name = StringField('Last Name')
@@ -31,6 +29,7 @@ def home():
         db.session.commit()
     users = models.Users.query.all()
     return render_template('home.html',form = form, users=users)
+    
     
    
 

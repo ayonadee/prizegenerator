@@ -17,10 +17,10 @@ class TestViews(TestBase):
 class TestNumber(TestBase):
     def test_len(self):
         response = self.client.get(url_for('randomnum'))
-        self.assertEqual(len(response.data), 4)
+        self.assertEqual(len(response.data), 8)
 
     def test_number(self):
         with patch('random.randint') as i:
             i.return_value = 1
             response = self.client.get(url_for('randomnum'))
-            self.assertIn(b'1111',response.data)
+            self.assertIn(b'11111111',response.data)

@@ -8,8 +8,8 @@ app = Flask(__name__)
 @app.route("/randomletter")
 def randomletter():
     random_letter = ""
-    lower_alphabet = string.ascii_letters.lower()
-    for letter in range(0,4):
+    lower_alphabet = string.ascii_letters.upper()
+    for letter in range(0,2):
         random_letter += rand.choice(lower_alphabet)
     return f'{random_letter}'
 print(randomletter(), end="")
