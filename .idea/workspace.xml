@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c653641-6db0-43bf-a4f3-56144ef1f895" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qG6ySew3GgXbfURuyIGO7KN6z6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c653641-6db0-43bf-a4f3-56144ef1f895" name="Default Changelist" comment="" />
+      <created>1616693841090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616693841090</updated>
+    </task>
+    <task id="LOCAL-00001" summary="updated README.md">
+      <created>1617585859831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617585859831</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated README.md">
+      <created>1617586248473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617586248473</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated README.md">
+      <created>1617586367670</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617586367670</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated README.md">
+      <created>1617676302743</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617676302743</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated README.md">
+      <created>1617748293205</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617748293205</updated>
+    </task>
+    <task id="LOCAL-00006" summary="read me updated">
+      <created>1618037006070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618037006070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="read me updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="read me updated" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="443" y="191" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618033845716">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="443" y="191" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.834@0.23.1440.834" timestamp="1618033845716" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1618035378716">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.834@0.23.1440.834" timestamp="1618035378716" />
+    <state x="441" y="167" key="Vcs.Push.Dialog.v2" timestamp="1617748295766">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="441" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1617748295766" />
+    <state x="100" y="126" width="1154" height="628" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618036217582">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="100" y="126" width="1154" height="628" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.831@0.23.1440.831" timestamp="1618036217582" />
+    <state x="143" y="128" width="1154" height="628" key="com.intellij.history.integration.ui.views.RecentChangeDialog" timestamp="1618035702100">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="143" y="128" width="1154" height="628" key="com.intellij.history.integration.ui.views.RecentChangeDialog/0.23.1440.834@0.23.1440.834" timestamp="1618035702100" />
+    <state x="519" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617676242450">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="519" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.832@0.23.1440.832" timestamp="1617676242450" />
+  </component>
+</project>

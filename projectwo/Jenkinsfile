@@ -3,7 +3,7 @@ pipeline {
     environment{
         DATABASE_URI = credentials('DATABASE_URI')
         SECRET_KEY = credentials('SECRET_KEY')
-        app_version = 'version2'
+        app_version = 'version1'
     }
     stages{
 
