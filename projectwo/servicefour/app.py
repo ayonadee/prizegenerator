@@ -5,7 +5,6 @@ import requests
 
 app = Flask(__name__)
 
-
 @app.route("/prizegenerator", methods=['GET','POST'])
 def prizegenerator():
     account_number = ""

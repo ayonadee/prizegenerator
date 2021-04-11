@@ -3,10 +3,10 @@ from application import app, models, db
 import random as rand
 import string
 import requests
+from sqlalchemy import desc
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField
 from os import getenv
-from sqlalchemy import desc
 
 
 class UserForm(FlaskForm):
@@ -26,7 +26,6 @@ def home():
         new_user = models.Users(first_name = form.first_name.data, last_name =form.last_name.data, account_number = acc_num['Account_Number'] , message = acc_num['Message'] )
         db.session.add(new_user)
         db.session.commit()
-    # users = models.Users.query.all()
     users = models.Users.query.order_by(desc("id")).limit(4).all()
     return render_template('home.html',form = form, users=users)
     

@@ -40,4 +40,4 @@ class TestViews(TestBase):
         with requests_mock.mock() as m:
             m.get("http://servicefour:5003/prizegenerator", json='package')
             response = self.client.get(url_for('home'))
-
+# hello
