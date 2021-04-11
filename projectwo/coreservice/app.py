@@ -6,8 +6,7 @@ import requests
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField
 from os import getenv
-
-# app = Flask(__name__)
+from sqlalchemy import desc
 
 
 class UserForm(FlaskForm):
@@ -27,7 +26,8 @@ def home():
         new_user = models.Users(first_name = form.first_name.data, last_name =form.last_name.data, account_number = acc_num['Account_Number'] , message = acc_num['Message'] )
         db.session.add(new_user)
         db.session.commit()
-    users = models.Users.query.all()
+    # users = models.Users.query.all()
+    users = models.Users.query.order_by(desc("id")).limit(4).all()
     return render_template('home.html',form = form, users=users)
     
     
