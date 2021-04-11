@@ -29,6 +29,7 @@ def home():
     users = models.Users.query.order_by(desc("id")).limit(4).all()
     return render_template('home.html',form = form, users=users)
     
+    
    
 
 if __name__=='__main__':

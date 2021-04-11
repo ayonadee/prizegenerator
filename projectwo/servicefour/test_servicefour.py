@@ -15,7 +15,7 @@ class TestViews(TestBase):
 
     def test_prizegen(self):
         with patch('requests.get') as i:
-            i.return_value.text = "abcd1234"
+            i.return_value.text = "ABCDEF12"
             response = self.client.get(url_for('prizegenerator'))
             self.assertEqual(response.status_code, 200)
             self.assertIsNotNone(response.data)
@@ -23,7 +23,7 @@ class TestViews(TestBase):
 
     def test_prizegenerator(self):
         with requests_mock.mock() as m:
-            m.get('http://servicethree:5002/randomletter', text='a')
+            m.get('http://servicethree:5002/randomletter', text='A')
             m.get('http://servicetwo:5001/randomnum', text= '4')
             response = self.client.get(url_for('prizegenerator'))
 
