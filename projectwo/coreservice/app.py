@@ -7,6 +7,11 @@ from sqlalchemy import desc
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField
 from os import getenv
+<<<<<<< HEAD
+=======
+from sqlalchemy import desc
+
+>>>>>>> 0c7f3eb44273783e6f1fc8393a46887bfbc32494
 
 
 class UserForm(FlaskForm):
