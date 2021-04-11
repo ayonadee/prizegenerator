@@ -41,4 +41,3 @@ class TestViews(TestBase):
             m.get("http://servicefour:5003/prizegenerator", json='package')
             response = self.client.get(url_for('home'))
 
-# he
