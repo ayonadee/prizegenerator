@@ -335,7 +335,7 @@ from this function is one specific number or letter every time.
 
 . requests-mock was used to provide a building 
 block to stub out all the HTTP requests that 
-were used for service two and service three to 
+were used for service one and service three to 
 be able to test whether the get requests was getting that URI.
 requests-mock allowed me to predefine responses 
 when certain URI's are called.
