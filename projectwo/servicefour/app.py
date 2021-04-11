@@ -4,7 +4,6 @@ import requests
 
 
 app = Flask(__name__)
-# db = SQLAlchemy(app)
 
 
 @app.route("/prizegenerator", methods=['GET','POST'])
