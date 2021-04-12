@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for, jsonify
 import requests
 
-# hello world
 app = Flask(__name__)
 
 
