@@ -5,7 +5,7 @@ Author: Ayona Duncan
 # Project Scope
 
 A service-orientated architecture that 
-generates a prize depending on your account number that was generated 
+generates a prize depending on your account number that was randomly generated 
 and is composed of at least 4 services that work together.
 
 
