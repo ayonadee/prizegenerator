@@ -4,8 +4,8 @@ Author: Ayona Duncan
 
 # Project Scope
 
-A service-orientated architecture that randomly 
-generates a prize depending on your account number that was generated 
+A service-orientated architecture that 
+generates a prize depending on your account number that was randomly generated 
 and is composed of at least 4 services that work together.
 
 
@@ -335,7 +335,7 @@ from this function is one specific number or letter every time.
 
 . requests-mock was used to provide a building 
 block to stub out all the HTTP requests that 
-were used for service two and service three to 
+were used for service one and service four to 
 be able to test whether the get requests was getting that URI.
 requests-mock allowed me to predefine responses 
 when certain URI's are called.
@@ -395,6 +395,7 @@ QA community DevOps learning
 
 https://pypi.org/project/requests-mock/
 
+https://www.kite.com/python/answers/how-to-generate-a-random-letter-in-python
+
 # License 
 This project is licensed under the terms of the MIT license
-
