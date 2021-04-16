@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c653641-6db0-43bf-a4f3-56144ef1f895" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/jenkinsbuild.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swarm.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/testcore.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618037075132</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="read me updated">
+      <created>1618113955397</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618113955397</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,11 +144,12 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.834@0.23.1440.834" timestamp="1618035378716" />
-    <state x="441" y="167" key="Vcs.Push.Dialog.v2" timestamp="1618037110350">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state x="441" y="168" key="Vcs.Push.Dialog.v2" timestamp="1618113963316">
+      <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="441" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1618037110350" />
     <state x="441" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1617748295766" />
+    <state x="441" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.834@0.23.1440.834" timestamp="1618113963316" />
     <state x="100" y="126" width="1154" height="628" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618036217582">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
