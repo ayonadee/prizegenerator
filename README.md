@@ -395,6 +395,7 @@ QA community DevOps learning
 
 https://pypi.org/project/requests-mock/
 
+https://www.kite.com/python/answers/how-to-generate-a-random-letter-in-python
+
 # License 
 This project is licensed under the terms of the MIT license
-
